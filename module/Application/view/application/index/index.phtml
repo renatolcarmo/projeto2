@@ -1,0 +1,33 @@
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Lista de Certificados</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th></th>
+                    </tr>
+                    <?php foreach ($this->certificado as $line): ?>
+                    <tr>
+                        <td><?php echo $line['id']; ?></td>
+                        <td><?php echo $line['nome']; ?></td>
+                        <td>
+                            <a class="btn btn-primary btn-xs" role="button" href="<?php echo $this->url('certificate', array('controller' => 'index', 'action' => 'detail', 'id' => $line['id'] )); ?>">Detalhes</a>
+                            <a class="btn btn-danger btn-xs"  role="button" href="<?php echo $this->url('certificate', array('controller' => 'index', 'action' => 'del',    'id' => $line['id'] )); ?>">Exclui</a>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                </table>
+            </div>
+            <div class="panel-footer">
+                <a class="btn btn-success btn-xs" role="button" href="<?php echo $this->url('certificate', array('controller' => 'index', 'action' => 'add')); ?>">Upload</a>
+            </div>
+        </div>
+    </div>
+
+</div>

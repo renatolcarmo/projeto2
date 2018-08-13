@@ -1,0 +1,23 @@
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Detalhes do Certificado</h3>
+            </div>
+            <div class="panel-body">
+                <p><b>Nome:</b> <?php echo $this->nome; ?></p>
+                <p><b><u>Informações do certificado</u></b></p>
+                <p><b>Subject DN:</b> <?php echo $this->subject_dn; ?></p>
+                <p><b>Issuer DN:</b> <?php echo $this->issuer_dn; ?></p>
+                <p><b>Data de Validade</b></p>
+                <p style="padding-left:50px;">Não antes de: <b><?php echo $this->valid_bf; ?></b></p>
+                <p style="padding-left:50px;">Não depois de: <b><?php echo $this->valid_af; ?></b></p>
+            </div>
+            <div class="panel-footer">
+                <a class="btn btn-default btn-xs" role="button" href="<?php echo $this->url('certificate'); ?>">Voltar</a>
+            </div>
+        </div>
+    </div>
+
+</div>
